@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-section">
+            <h1>Tetris</h1>
+            <div class="game-info">
+                <div class="info-item">
+                    <span class="label">Score:</span>
+                    <span id="score" class="value">0</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Level:</span>
+                    <span id="level" class="value">1</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Lines:</span>
+                    <span id="lines" class="value">0</span>
+                </div>
+            </div>
+            <canvas id="tetris" width="240" height="400"></canvas>
+            <div class="controls">
+                <button id="startBtn" class="btn">Start Game</button>
+                <button id="pauseBtn" class="btn" disabled>Pause</button>
+                <button id="resetBtn" class="btn">Reset</button>
+            </div>
+            <div class="instructions">
+                <h3>Controls:</h3>
+                <p>← → : Move</p>
+                <p>↓ : Soft Drop</p>
+                <p>↑ : Rotate</p>
+                <p>Space : Hard Drop</p>
+            </div>
+        </div>
+        
+        <div class="ranking-section">
+            <h2>Top 10 Rankings</h2>
+            <div id="rankings" class="rankings-list"></div>
+            <div id="gameOverModal" class="modal">
+                <div class="modal-content">
+                    <h2>Game Over!</h2>
+                    <p>Your Score: <span id="finalScore"></span></p>
+                    <input type="text" id="playerName" placeholder="Enter your name" maxlength="20">
+                    <button id="submitScore" class="btn">Submit Score</button>
+                    <button id="closeModal" class="btn btn-secondary">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
